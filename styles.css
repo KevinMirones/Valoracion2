@@ -1,0 +1,106 @@
+body {
+            background-color: #e0f7fa; /* Color de fondo suave */
+            font-family: 'Arial', sans-serif; /* Cambiar tipo de letra */
+            margin: 0;
+            height: 100vh; /* Altura total de la ventana */
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+        }
+
+        .frame {
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .menu {
+            flex: 1; /* Ocupa la mitad del espacio */
+            background-color: #b2ebf2; /* Color de fondo pastel para el menú */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        .formulario {
+            flex: 1; /* Ocupa la otra mitad del espacio */
+            background-color: #ffffff; /* Color de fondo para el formulario */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centra el contenido verticalmente */
+            padding: 20px;
+        }
+
+        .pagina {
+            flex: 1; /* Este espacio se puede usar para contenido adicional */
+            background-color: #e0f7fa; /* Color de fondo para la página externa */
+            overflow: hidden; /* Oculta el desbordamiento */
+            border-radius: 10px; /* Bordes redondeados */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+
+        iframe {
+            width: 100%; /* Ocupa el 100% del ancho del marco */
+            height: 100%; /* Ocupa el 100% de la altura del marco */
+            border: none; /* Sin borde */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+
+        h2 {
+            color: #00796b; /* Color del título */
+            margin-top: 0;
+        }
+
+        p {
+            color: #555; /* Color del texto */
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%; /* Ancho completo */
+            padding: 10px; /* Espaciado interno */
+            margin: 10px 0; /* Margen */
+            border: 1px solid #b2ebf2; /* Borde suave */
+            border-radius: 5px; /* Bordes redondeados */
+            font-size: 16px; /* Tamaño de fuente */
+        }
+
+        input[type="radio"] {
+            margin-right: 5px; /* Espaciado a la derecha */
+        }
+
+        input[type="submit"] {
+            background-color: #00796b; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            padding: 10px 15px; /* Espaciado interno */
+            cursor: pointer; /* Cambia el cursor al pasar el mouse */
+            font-size: 16px; /* Tamaño de fuente */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004d40; /* Color de fondo del botón al pasar el mouse */
+        }
+
+select {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 5px; /* Bordes redondeados */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}
+
+.contenido {
+    width: 100%; /* Ocupa todo el ancho del marco */
+    height: calc(100vh - 160px); /* Ajusta la altura para ocupar el espacio restante */
+    border: 1px solid #ccc; /* Borde opcional */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 20px; /* Espaciado superior */
+    overflow: hidden; /* Oculta el desbordamiento */
+    box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+}

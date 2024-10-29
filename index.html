@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ejemplo de Marcos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="frame menu full-height">
+            <h2>Menú Desplegable</h2>
+            <select id="menu" onchange="cargarPagina()">
+                <option value="">Seleccione una opción</option>
+                <option value="admisiones">Admisiones</option>
+                <option value="requisitos">Requisitos de Inscripción</option>
+                <option value="visitar">Visitar Página Web</option>
+            </select>
+            <div id="content" class="contenido full-height"></div>
+        </div>
+        
+        <div class="frame formulario">
+            <h2>Encuesta sobre la Universidad</h2>
+            <form action="mipagina10.html" method="post">
+                <p><b>1. ¿Cuál es tu carrera?</b><br>
+                <input type="text" name="carrera" size="50" required></p>
+
+                <p><b>2. ¿Qué tan satisfecho estás con la calidad de la enseñanza?</b><br>
+                <input type="radio" name="satisfaccion" value="Muy Satisfecho" required> Muy Satisfecho<br>
+                <input type="radio" name="satisfaccion" value="Satisfecho"> Satisfecho<br>
+                <input type="radio" name="satisfaccion" value="Neutral"> Neutral<br>
+                <input type="radio" name="satisfaccion" value="Insatisfecho"> Insatisfecho<br>
+                <input type="radio" name="satisfaccion" value="Muy Insatisfecho"> Muy Insatisfecho</p>
+
+                <p><b>3. ¿Qué aspectos consideras que se deben mejorar en la universidad?</b><br>
+                <textarea name="mejoras" rows="4" cols="50" required></textarea></p>
+
+                <p><b>4. ¿Con qué frecuencia asistes a actividades extracurriculares?</b><br>
+                <input type="radio" name="frecuencia_actividades" value="Nunca" required> Nunca<br>
+                <input type="radio" name="frecuencia_actividades" value="Rara vez"> Rara vez<br>
+                <input type="radio" name="frecuencia_actividades" value="A veces"> A veces<br>
+                <input type="radio" name="frecuencia_actividades" value="Frecuentemente"> Frecuentemente<br>
+                <input type="radio" name="frecuencia_actividades" value="Siempre"> Siempre</p>
+
+                <p><b>5. ¿Recomendarías esta universidad a otros estudiantes?</b><br>
+                <input type="radio" name="recomendacion" value="Sí" required> Sí<br>
+                <input type="radio" name="recomendacion" value ="No"> No</p>
+
+                <p><input type="submit" value="Enviar"></p>
+            </form>
+        </div>
+
+        <div class="frame pagina full-height">
+            <h2>Actividad en Clase</h2>
+            <iframe src="ActividadEnClase.html" style="width:100%; height:100%; border:none;"></iframe>
+        </div>
+    </div>
+
+    <style>
+        .full-height {
+            height: 100vh; /* ocupa toda la altura disponible */
+            overflow-y: auto; /* agrega barra de desplazamiento vertical si es necesario */
+        }
+    </style>
+
+    <script>
+        function cargarPagina() {
+            const menu = document.getElementById('menu');
+            const content = document.getElementById('content');
+            const value = menu.value;
+
+            if (value === "visitar") {
+                content.innerHTML = `<iframe src="https://www.upds.edu.bo/carrera/ingenieria-de-sistemas/" style="width:100%; height:100%; border:none;"></iframe>`;
+            } else if (value === "admisiones") {
+                content.innerHTML = `<iframe src="https://www.upds.edu.bo/admisiones/nacional/" style="width:100%; height:100%; border:none;"></iframe>`;
+            } else if (value === "requisitos") {
+                content.innerHTML = `<iframe src="https://www.upds.edu.bo/requisitos/nacional/" style="width:100%; height:100%; border:none;"></iframe>`;
+            }
+        }
+    </script>
+</body>
+</html>
